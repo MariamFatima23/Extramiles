@@ -19,8 +19,9 @@ export function FeatureCard({ img }: FeatureCardProps) {
             w-[83px]
             md:w-[128px] md:rounded-[7px]
             xl:w-[305px] xl:rounded-l-[9px] xl:rounded-r-none"
-          loading="lazy"
+          loading="eager"
           decoding="async"
+          fetchPriority="high"
           src={img}
         />
       </div>

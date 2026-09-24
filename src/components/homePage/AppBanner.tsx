@@ -27,6 +27,8 @@ export function AppBanner() {
         {/* phone — small, bottom-aligned, sticks above bar */}
         <img
           alt="ExtraMiles app"
+          loading="lazy"
+          decoding="async"
           className="pointer-events-none relative z-10 mb-[-12px] h-[130px] w-[90px] shrink-0 object-cover"
           src={A.phone}
         />
@@ -66,6 +68,8 @@ export function AppBanner() {
         <div className="absolute bottom-0 left-6">
           <img
             alt="ExtraMiles app"
+            loading="lazy"
+            decoding="async"
             className="pointer-events-none h-[130px] w-[120px] shrink-0 object-cover"
             src={A.phone}
           />
@@ -88,6 +92,8 @@ export function AppBanner() {
         <div className="absolute inset-[0_76.95%_0_10.78%] flex items-center p-[10px]">
           <img
             alt="ExtraMiles app"
+            loading="lazy"
+            decoding="async"
             className="pointer-events-none shrink-0 object-cover xl:h-[143px] xl:w-[137px]"
             src={A.phone}
           />
