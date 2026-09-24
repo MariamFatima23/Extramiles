@@ -20,7 +20,12 @@ export function Line({ src = A.line31, inset = "inset-[-2px_0_0_0]", className =
 
 export function Logo() {
   return (
-    <Link to="/home" aria-label="ExtraMiles home" className="flex items-center gap-[7px]">
+    <Link
+      to="/home"
+      aria-label="ExtraMiles home"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      className="flex items-center gap-[7px]"
+    >
       <img alt="ExtraMiles" className="size-[40px] shrink-0 object-cover md:size-[46px]" src={A.logo} />
       <div className="flex flex-col items-start leading-[normal] text-brand">
         <p className="whitespace-nowrap text-[20px] font-bold md:text-[24px]">ExtraMiles</p>

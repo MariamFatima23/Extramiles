@@ -14,6 +14,7 @@ function AppRoutes() {
     };
 
     document.title = titles[location.pathname] ?? "404 - ExtraMiles";
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
 
   return (
