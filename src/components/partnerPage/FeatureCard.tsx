@@ -18,7 +18,7 @@ export function FeatureCard({ img, motion }: FeatureCardProps) {
           className={`feature-card-media-${motion} pointer-events-none object-cover rounded-[7px]
             w-[83px]
             md:w-[128px] md:rounded-[7px]
-            xl:w-[305px] xl:rounded-l-[9px] xl:rounded-r-none"
+            xl:w-[305px] xl:rounded-l-[9px] xl:rounded-r-none`}
           loading="eager"
           decoding="async"
           fetchPriority="high"
