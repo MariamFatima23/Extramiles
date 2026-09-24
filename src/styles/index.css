@@ -23,3 +23,26 @@ p { margin: 0; }
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+.feature-card-media-mobile,
+.feature-card-media-laptop {
+  transform-origin: center;
+}
+
+.group:hover .feature-card-media-mobile {
+  animation: feature-mobile-hover 1.2s ease-in-out infinite;
+}
+
+.group:hover .feature-card-media-laptop {
+  animation: feature-laptop-hover 1.2s ease-in-out infinite;
+}
+
+@keyframes feature-mobile-hover {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.05) translateY(-3px); }
+}
+
+@keyframes feature-laptop-hover {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(5px) translateY(-2px); }
+}

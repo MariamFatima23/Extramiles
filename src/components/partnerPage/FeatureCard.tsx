@@ -1,10 +1,10 @@
 import { A } from "../../assets/assetPaths";
 
-type FeatureCardProps = { img: string };
+type FeatureCardProps = { img: string; motion: "mobile" | "laptop" };
 
-export function FeatureCard({ img }: FeatureCardProps) {
+export function FeatureCard({ img, motion }: FeatureCardProps) {
   return (
-    <div className="flex w-full shrink-0 overflow-hidden rounded-[12px] border border-[rgba(4,69,209,0.29)] bg-white items-stretch
+    <div className="group flex w-full shrink-0 overflow-hidden rounded-[12px] border border-[rgba(4,69,209,0.29)] bg-white items-stretch
       md:h-[130px]
       xl:h-[198px] xl:w-[628px]">
 
@@ -15,7 +15,7 @@ export function FeatureCard({ img }: FeatureCardProps) {
         xl:p-0">
         <img
           alt=""
-          className="pointer-events-none object-cover rounded-[7px]
+          className={`feature-card-media-${motion} pointer-events-none object-cover rounded-[7px]
             w-[83px]
             md:w-[128px] md:rounded-[7px]
             xl:w-[305px] xl:rounded-l-[9px] xl:rounded-r-none"

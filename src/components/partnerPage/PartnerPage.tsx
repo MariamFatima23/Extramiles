@@ -120,8 +120,8 @@ export default function PartnerPage() {
         lg:-mt-[50px] lg:gap-[28px]`}>
         <StatsBar />
         <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 md:gap-4 xl:flex xl:items-center">
-          <FeatureCard img={A.location1} />
-          <FeatureCard img={A.location2} />
+          <FeatureCard img={A.location1} motion="mobile" />
+          <FeatureCard img={A.location2} motion="laptop" />
         </div>
         <JoinBanner />
         <div className="flex w-full flex-col items-center p-[10px]">
