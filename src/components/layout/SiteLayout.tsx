@@ -174,7 +174,7 @@ function VDivider() {
 
 export function Footer({ compact = false }: { compact?: boolean }) {
   const col = "flex w-full flex-col items-start gap-[16px] lg:w-[140px] xl:w-[165px]";
-  const list = "w-full text-[14px] font-semibold leading-[22px] text-body xl:h-[93px]";
+  const list = "flex w-full flex-col items-start text-[14px] font-semibold leading-[22px] text-body xl:h-[93px]";
   const title = "w-full text-[15px] font-bold leading-[21px] text-brand xl:h-[20px]";
   return (
     <footer className={`flex w-full flex-col items-center gap-[8px] rounded-[8px] bg-white px-5 py-8 md:px-6 md:py-8 lg:px-[30px] lg:py-[39px] ${compact ? "xl:pb-[29px]" : ""}`}>
@@ -194,7 +194,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
         <div className="grid w-full grid-cols-2 gap-x-4 gap-y-0">
           <div className="flex flex-col items-start gap-[10px]">
             <p className={title}>Support</p>
-            <div className="w-full text-[14px] font-semibold leading-[26px] text-body">
+            <div className="flex w-full flex-col items-start text-[14px] font-semibold leading-[26px] text-body">
               <p>FAQ</p>
               <p>Privacy Policy</p>
               <p>Terms &amp; Conditions</p>
@@ -202,7 +202,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
           </div>
           <div className="flex flex-col items-start gap-[10px]">
             <p className={title}>Quick Links</p>
-            <div className="w-full text-[14px] font-semibold leading-[26px] text-body">
+            <div className="flex w-full flex-col items-start text-[14px] font-semibold leading-[26px] text-body">
               <Link to="/home">Home</Link>
               <Link to="/partner">Partners</Link>
               <Link to="/about">About Us</Link>
@@ -253,13 +253,13 @@ export function Footer({ compact = false }: { compact?: boolean }) {
         <div className="grid w-full grid-cols-3 gap-4">
           <div className="flex flex-col items-start gap-[12px]">
             <p className={title}>Support</p>
-            <div className="w-full text-[13px] font-semibold leading-[22px] text-body">
+            <div className="flex w-full flex-col items-start text-[13px] font-semibold leading-[22px] text-body">
               <p>FAQ</p><p>Privacy Policy</p><p>Terms &amp; Conditions</p>
             </div>
           </div>
           <div className="flex flex-col items-start gap-[12px]">
             <p className={title}>Quick Links</p>
-            <div className="w-full text-[13px] font-semibold leading-[22px] text-body">
+            <div className="flex w-full flex-col items-start text-[13px] font-semibold leading-[22px] text-body">
               <Link to="/home">Home</Link><Link to="/partner">Partners</Link><Link to="/about">About Us</Link><Link to="/contact">Contact</Link>
             </div>
           </div>
