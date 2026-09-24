@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { navigationLinks, type NavigationLink } from "../../constants/navigation";
 import { A } from "../../assets/assetPaths";
@@ -173,9 +173,15 @@ function VDivider() {
 }
 
 export function Footer({ compact = false }: { compact?: boolean }) {
+  const [subscribed, setSubscribed] = useState(false);
   const col = "flex w-full flex-col items-start gap-[16px] lg:w-[140px] xl:w-[165px]";
   const list = "flex w-full flex-col items-start text-[14px] font-semibold leading-[22px] text-body xl:h-[93px]";
   const title = "w-full text-[15px] font-bold leading-[21px] text-brand xl:h-[20px]";
+  const handleSubscribe = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setSubscribed(true);
+    window.setTimeout(() => setSubscribed(false), 3000);
+  };
   return (
     <footer className={`flex w-full flex-col items-center gap-[8px] rounded-[8px] bg-white px-5 py-8 md:px-6 md:py-8 lg:px-[30px] lg:py-[39px] ${compact ? "xl:pb-[29px]" : ""}`}>
 
@@ -215,7 +221,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
         <div className="flex w-full flex-col items-center gap-[14px]">
           <p className="w-full text-center text-[15px] font-bold leading-[21px] text-brand">Stay Connected</p>
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubscribe}
             className="flex h-[40px] w-full items-center rounded-[8px] border border-muted bg-[#fefefe] pl-[15px]"
           >
             <input
@@ -266,7 +272,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
           <div className="flex flex-col items-start gap-[14px]">
             <p className={title}>Stay Connected</p>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubscribe}
               className="flex h-[32px] w-full items-center rounded-[8px] border border-muted bg-[#fefefe] pl-[10px]"
             >
               <input
@@ -319,7 +325,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
           <div className="flex w-full max-w-[400px] flex-col items-start gap-[19px] lg:max-w-none xl:w-[269px] xl:shrink-0">
             <p className={title}>Stay Connected</p>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubscribe}
               className="flex h-[32px] w-full items-center justify-between rounded-[8px] border border-muted bg-[#fefefe] pl-[15px]"
             >
               <input
@@ -345,6 +351,11 @@ export function Footer({ compact = false }: { compact?: boolean }) {
         </div>
       </div>
 
+      {subscribed && (
+        <div role="status" className="fixed bottom-5 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-brand px-5 py-3 text-center text-sm font-semibold text-white shadow-lg">
+          Congratulations! You are subscribed.
+        </div>
+      )}
       <p className="w-full text-center text-[14px] font-semibold leading-[21px] text-body xl:h-[21px]">
         @ 2024 EXTRAMILES. All rights reseved
       </p>
