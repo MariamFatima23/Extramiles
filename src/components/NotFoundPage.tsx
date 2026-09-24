@@ -1,15 +1,9 @@
 import { Link } from "react-router-dom";
 import { A } from "../assets/assetPaths";
-import { Logo } from "./layout";
 
 export default function NotFoundPage() {
   return (
     <div className="flex min-h-screen flex-col bg-page">
-      <header className="border-b border-[rgba(4,69,209,0.1)] bg-page">
-        <div className="mx-auto flex w-full max-w-[1280px] items-center px-4 py-3 sm:px-6 xl:px-0">
-          <Logo />
-        </div>
-      </header>
       <main className="flex flex-1 items-center justify-center px-6 py-16 text-center">
         <div className="flex max-w-[460px] flex-col items-center gap-5">
           <img alt="" className="size-16 object-cover" src={A.logo} />
