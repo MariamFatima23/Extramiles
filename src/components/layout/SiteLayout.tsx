@@ -353,7 +353,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
 
       {subscribed && (
         <div role="status" className="fixed bottom-5 left-1/2 z-50 -translate-x-1/2 rounded-lg bg-brand px-5 py-3 text-center text-sm font-semibold text-white shadow-lg">
-          Congratulations! You are subscribed.
+          Congratulations! You have secured ExtraMiles.
         </div>
       )}
       <p className="w-full text-center text-[14px] font-semibold leading-[21px] text-body xl:h-[21px]">
