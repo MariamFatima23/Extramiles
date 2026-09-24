@@ -198,10 +198,10 @@ export function Footer({ compact = false }: { compact?: boolean }) {
           <div className="flex flex-col items-start gap-[10px]">
             <p className={title}>Quick Links</p>
             <div className="w-full text-[14px] font-semibold leading-[26px] text-body">
-              <p>Home</p>
-              <p>Partners</p>
-              <p>About Us</p>
-              <p>Contact</p>
+              <Link to="/home">Home</Link>
+              <Link to="/partner">Partners</Link>
+              <Link to="/about">About Us</Link>
+              <Link to="/contact">Contact</Link>
             </div>
           </div>
         </div>
@@ -227,9 +227,9 @@ export function Footer({ compact = false }: { compact?: boolean }) {
           </form>
           <div className="flex items-center gap-[16px]">
             {[A.facebook, A.instagram, A.linkedin].map((s) => (
-              <div key={s} className="relative size-[40px] shrink-0 overflow-clip">
+              <a key={s} href="#" className="relative size-[40px] shrink-0 overflow-clip">
                 <img alt="" className="absolute inset-[-0.11%] block max-w-none" style={{ width: "100.22%", height: "100.22%" }} src={s} />
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -255,7 +255,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
           <div className="flex flex-col items-start gap-[12px]">
             <p className={title}>Quick Links</p>
             <div className="w-full text-[13px] font-semibold leading-[22px] text-body">
-              <p>Home</p><p>Partners</p><p>About Us</p><p>Contact</p>
+              <Link to="/home">Home</Link><Link to="/partner">Partners</Link><Link to="/about">About Us</Link><Link to="/contact">Contact</Link>
             </div>
           </div>
           <div className="flex flex-col items-start gap-[14px]">
@@ -278,9 +278,9 @@ export function Footer({ compact = false }: { compact?: boolean }) {
             </form>
             <div className="flex items-center gap-[10px]">
               {[A.facebook, A.instagram, A.linkedin].map((s) => (
-                <div key={s} className="relative size-[36px] shrink-0 overflow-clip">
+                <a key={s} href="#" className="relative size-[36px] shrink-0 overflow-clip">
                   <img alt="" className="absolute inset-[-0.11%] block max-w-none" style={{ width: "100.22%", height: "100.22%" }} src={s} />
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -306,7 +306,7 @@ export function Footer({ compact = false }: { compact?: boolean }) {
           <VDivider />
           <div className={col}>
             <p className={title}>Quick Links</p>
-            <div className={list}><p>Home</p><p>Partners</p><p>About Us</p><p>Contact</p></div>
+            <div className={list}><Link to="/home">Home</Link><Link to="/partner">Partners</Link><Link to="/about">About Us</Link><Link to="/contact">Contact</Link></div>
           </div>
         </div>
         <div className="flex items-center lg:min-w-0 lg:flex-[1_0_0] lg:gap-10 xl:gap-[71px]">
@@ -331,9 +331,9 @@ export function Footer({ compact = false }: { compact?: boolean }) {
             </form>
             <div className="flex items-center gap-[16px]">
               {[A.facebook, A.instagram, A.linkedin].map((s) => (
-                <div key={s} className="relative size-[40px] shrink-0 overflow-clip">
+                <a key={s} href="#" className="relative size-[40px] shrink-0 overflow-clip">
                   <img alt="" className="absolute inset-[-0.11%] block max-w-none" style={{ width: "100.22%", height: "100.22%" }} src={s} />
-                </div>
+                </a>
               ))}
             </div>
           </div>
