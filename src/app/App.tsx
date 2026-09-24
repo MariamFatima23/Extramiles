@@ -9,8 +9,8 @@ function AppRoutes() {
 
   useEffect(() => {
     const titles: Record<string, string> = {
-      "/home": "ExtraMiles - Home",
-      "/partner": "ExtraMiles - Partner",
+      "/home": "Home - ExtraMiles",
+      "/partner": "Partner - ExtraMiles",
     };
 
     document.title = titles[location.pathname] ?? "404 - ExtraMiles";
